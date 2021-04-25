@@ -1,0 +1,16 @@
+<h2> hello {{request.user}} </h2>
+
+<h1>list of games to play</h1>
+<ol>
+<li>
+ <a href="{% url 'mysnake_game' %}" > Snakes </a>
+</li>
+</ol>
+
+{% if request.user.is_authenticated %}
+<a href= "{% url 'list_of_scores' %}"> See Scores</a>
+<a href="{% url 'logout' %}"> <h4> Logout</h4></a>
+{% else %}
+To play games please login
+<a href="{% url 'loginpg' %}"> <h4> Login</h4></a>
+{% endif %}

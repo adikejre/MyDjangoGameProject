@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Snake Game</title>
+        <style>
+        body {background-color: coral;}
+            canvas{
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <canvas id="snake" width="608" height="608"></canvas>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    {% load static %}
+     <script src="{% static 'js_snake.js' %}">
+
+      </script>
+      <a href="{% url 'game_list' %}"> <h3>Go back to games</h3> </a>
+</html>

@@ -1,0 +1,16 @@
+<h1> {{request.user}}  Scores </h1>
+
+{% for item in obs %}
+<h3> Game title</h3>
+{{item.game_title}}
+
+<br>
+
+Latest score:
+{{item.latest_score}}
+<br>
+Highest score
+{{item.max_score}}
+{% endfor %}
+
+<a href="{% url 'game_list' %}"> <h3>Go back to games</h3> </a>
